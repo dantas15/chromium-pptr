@@ -3,7 +3,7 @@ Easily run chromium in any cloud
 
 ## Ideas
 
-I've encoutered some issues when trying to deploy my [astro blog](https://dantas15.com] with vercel because Chromium can't be installed on the server when building.
+I've encoutered some issues when trying to deploy my [astro blog](https://dantas15.com) with vercel because Chromium can't be installed on the server when building.
 
 In this repo I'll try to create an API that can run a chromium on the fly.
 
