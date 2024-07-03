@@ -47,3 +47,7 @@ Thumbs.db
 
 # Fly.io specific
 .fly
+
+# prod
+dist
+build

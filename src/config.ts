@@ -6,8 +6,11 @@ const cwd = process.cwd();
 
 const root = path.join.bind(cwd);
 
+const envFilename =
+  process.env.NODE_ENV === 'production' ? '.env.production' : '.env';
+
 dotenvSafe.config({
-  path: root('.env'),
+  path: root(envFilename),
   sample: root('.env.example'),
 });
 
