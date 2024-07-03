@@ -7,10 +7,11 @@ import Router from 'koa-router';
 import { authorize } from '@/modules/auth/authorize';
 import { html2pdf } from '@/modules/browser/html2pdf';
 import { assert } from '@/utils/assert';
+import { config } from '@/config';
 
 const app = new Koa();
 
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: config.CORS_ORIGIN }));
 app.use(KoaLogger());
 
 app.use(
