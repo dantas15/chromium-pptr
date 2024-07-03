@@ -17,6 +17,7 @@ const config = {
   HOST: ENV.HOST ?? '',
   PORT: ENV.PORT ?? 3000,
   GITHUB_KEY: ENV.GITHUB_KEY ?? '',
+  CORS_ORIGINS: ENV.CORS_ORIGINS?.split(',') ?? [''],
 };
 
 export { config };
