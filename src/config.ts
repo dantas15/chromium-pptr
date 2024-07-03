@@ -16,6 +16,7 @@ const ENV = process.env;
 const config = {
   HOST: ENV.HOST ?? '',
   PORT: ENV.PORT ?? 3000,
+  GITHUB_KEY: ENV.GITHUB_KEY ?? '',
 };
 
 export { config };
