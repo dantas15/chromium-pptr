@@ -19,6 +19,8 @@ app.use(
   })
 );
 
+app.use(authorize);
+
 const router = new Router();
 
 router.post('/html2pdf', async (ctx: Context) => {
