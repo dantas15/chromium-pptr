@@ -22,11 +22,17 @@ app.use(
   })
 );
 
-app.use(authorize);
-
 const router = new Router();
 
-router.post('/html2pdf', async (ctx) => {
+router.get('/', (ctx) => {
+  ctx.body = { message: 'it works without authentication!' };
+});
+
+router.get('/auth', authorize, (ctx) => {
+  ctx.body = { message: 'it works with authentication!' };
+});
+
+router.post('/html2pdf', authorize, async (ctx) => {
   const body = ctx.request.body as { html: string };
   assert(ctx, body.html, 400, 'HTML is required');
   ctx.body = { pdf: (await html2pdf(body.html)).toJSON() };
